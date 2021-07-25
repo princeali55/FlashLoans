@@ -25,8 +25,8 @@ const DIRECTION = {
 const init = async () => {
   const networkId = await web3.eth.net.getId();
   const flashloan = new web3.eth.Contract(
-    Flashloan.abi
-    //Flashloan.networks[networkId].address
+    Flashloan.abi,
+    Flashloan.networks[networkId].address
   );
   
   let ethPrice;
